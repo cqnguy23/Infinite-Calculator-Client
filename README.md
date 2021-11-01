@@ -20,6 +20,6 @@ A useful calculator for performing mathematical operations on infinite integer n
 
 - Live demo website: https://holistics-calculator.netlify.app/
 - Instructions:
-  - Type in your mathematical expressions at the input bar at the bottom in the following format: NUMBER OPERATIONS NUMBER (eg: 934123 _ 12314213). The website currently only supports multiplication, addition and subtraction (_, -, +). Division is not yet supported
+  - Type in your mathematical expressions at the input bar at the bottom in the following format: NUMBER OPERATIONS NUMBER (eg: 934123 + 12314213). The website currently only supports multiplication, addition and subtraction (\*, -, +). Division is not yet supported
   - Your result will be displayed in the top display.
   - On the right portion you can find the history logs of your previous calculations. You can click on that and start working on your unfinished jobs.

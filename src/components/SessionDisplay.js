@@ -7,7 +7,6 @@ const SessionDisplay = ({ sessions, setCurrentSession }) => {
   const onButtonClick = async (id) => {
     const resp = await api.get(`/calculation/${id}`);
     const session = resp.data;
-    console.log(session);
     setCurrentSession(session);
   };
   return (

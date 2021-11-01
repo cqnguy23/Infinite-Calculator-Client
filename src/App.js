@@ -16,8 +16,7 @@ function App() {
       setSessions(sessions);
     };
     getSessions();
-  }, []);
-  console.log(currentSession);
+  }, [sessions]);
   return (
     <Layout style={{ height: "100vh", fontFamily: "'Roboto', sans-serif" }}>
       <Header style={{ color: "white", fontSize: "20px", height: "10vh" }}>
@@ -40,7 +39,7 @@ function App() {
         <Col
           span={6}
           style={{
-            // border: "1px solid black",
+            borderLeft: "1px solid black",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",

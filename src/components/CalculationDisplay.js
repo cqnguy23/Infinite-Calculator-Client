@@ -1,5 +1,4 @@
-import { Divider, Input, message, Row } from "antd";
-import { Content } from "antd/lib/layout/layout";
+import { Divider, Input, message } from "antd";
 import React from "react";
 import api from "../axios";
 import {
@@ -11,11 +10,10 @@ const CalculationDisplay = ({ currentSession, setCurrentSession }) => {
   const calculations = currentSession?.calculationLogs || [];
   const onEnter = async (e) => {
     const input = e.target.value;
-    console.log(input);
     if (!checkCalculationFormat(input))
       message.error("Wrong calculation format");
     else {
-      const filterRegex = /\s*(\+|\-|\*)\s*/g;
+      const filterRegex = /\s*(\+|-|\*)\s*/g;
       const expression = input.split(filterRegex);
       const firstOperand = expression[0];
       const operation = expression[1];
@@ -29,8 +27,6 @@ const CalculationDisplay = ({ currentSession, setCurrentSession }) => {
         calculation = { ...calculation, sessionID: currentSession._id };
       const resp = await api.post("/calculation", calculation);
       const data = resp.data;
-      console.log(data);
-      console.log(currentSession);
       setCurrentSession(data.owner);
     }
   };
@@ -64,7 +60,7 @@ const CalculationDisplay = ({ currentSession, setCurrentSession }) => {
           );
         })}
       </div>
-      <div style={{}}>
+      <div>
         <Input style={{ minHeight: "50px" }} onPressEnter={onEnter} />
       </div>
     </>

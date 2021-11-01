@@ -6,7 +6,7 @@ stringUtils.formatNumberString = (num) => {
   return num.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 stringUtils.checkCalculationFormat = (str) => {
-  const regex = /^\d+\s*(\+|\-|\*)\s*\d+\s*$/g;
+  const regex = /^\d+\s*(\+|-|\*)\s*\d+\s*$/g;
   return regex.test(str);
 };
 
